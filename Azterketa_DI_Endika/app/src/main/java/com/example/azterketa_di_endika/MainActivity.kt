@@ -16,6 +16,7 @@ import com.example.azterketa_di_endika.ui.theme.Azterketa_DI_EndikaTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.material3.Button
+import androidx.compose.ui.AbsoluteAlignment
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
@@ -39,6 +40,7 @@ class MainActivity : ComponentActivity() {
             modifier = Modifier
                 .fillMaxSize()
                 .background(color = Color.Cyan)
+                .padding(vertical = 16.dp)
         ) {
 
             Column(
@@ -70,8 +72,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Column(
                         modifier = Modifier,
-                        verticalArrangement = Arrangement.Center,
-                        horizontalAlignment = Alignment.CenterHorizontally
+                        horizontalAlignment = AbsoluteAlignment.Left
                     ) {
                         Text(
                             text = "Hello Android!",
@@ -81,8 +82,7 @@ class MainActivity : ComponentActivity() {
 
                     Column(
                         modifier = Modifier,
-                        verticalArrangement = Arrangement.Center,
-                        horizontalAlignment = Alignment.CenterHorizontally
+                        horizontalAlignment = AbsoluteAlignment.Right
                     ) {
                         Text(
                             text = "Hello Android!",
@@ -94,9 +94,9 @@ class MainActivity : ComponentActivity() {
 
             Column(
                 modifier = Modifier
-                    .padding(horizontal = 16.dp)
+                    .padding(horizontal = 100.dp)
                     .width(200.dp)
-                    .weight(0.5f)
+                    .weight(0.4f)
             ) {
                 Row(
                     modifier = Modifier
@@ -155,7 +155,7 @@ class MainActivity : ComponentActivity() {
                     .fillMaxWidth()
                     .padding(horizontal = 16.dp)
                     .background(color = Color.Yellow)
-                    .weight(1f),
+                    .weight(2f),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
